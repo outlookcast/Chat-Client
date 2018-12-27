@@ -4,6 +4,10 @@
   "private": true,
   "dependencies": {
     "@aspnet/signalr": "^1.1.0",
+    "@material-ui/core": "^3.7.1",
+    "@material-ui/icons": "^3.0.1",
+    "material-ui-icons": "^1.0.0-beta.36",
+    "moment": "^2.23.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-scripts": "2.1.2"
