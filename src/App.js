@@ -102,7 +102,6 @@ class App extends Component {
             </Toolbar>
           </AppBar>
           <Chat userName={this.state.userName} />
-          <p>Em construcao!</p>
         </div>
       )
     }
