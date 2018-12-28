@@ -46,7 +46,7 @@ class Chat extends Component {
 
     async componentDidMount() {
         var connection = await new signalR.HubConnectionBuilder()
-            .withUrl("http://viniciuschatsignalr.azurewebsites.net/chatHub")
+            .withUrl("https://viniciuschatsignalr.azurewebsites.net/chatHub")
             .build();
         await connection.start();
         connection.on("MessageChannel", data => {
