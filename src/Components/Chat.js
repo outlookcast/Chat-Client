@@ -21,7 +21,8 @@ class Chat extends Component {
             messages: [],
             userName: this.props.userName,
             connection: null,
-            message: ""
+            message: "",
+            open: false
         };
     }
 
@@ -50,7 +51,6 @@ class Chat extends Component {
             .build();
         await connection.start();
         connection.on("MessageChannel", data => {
-            console.log("MessageChannel ==>", data);
             this.formatMessage(data);
         });
         this.setState({
@@ -67,14 +67,15 @@ class Chat extends Component {
         this.setState({
             messages: messages
         });
-        console.log("message ==>", message);
     }
 
     SendMessage() {
-        this.state.connection.invoke("sendMessage", this.state.userName, this.state.message);
-        this.setState({
-            message: ""
-        });
+        if (this.state.connection) {
+            this.state.connection.invoke("sendMessage", this.state.userName, this.state.message);
+            this.setState({
+                message: ""
+            });
+        }
     }
 
     renderMessages() {
@@ -86,6 +87,7 @@ class Chat extends Component {
     render() {
         return (
             <div>
+                {this.dialogRender()}
                 <header className="Chat-Header">Welcome to the chatroom</header>
                 <div style={{
                     maxHeight: '85vh',
