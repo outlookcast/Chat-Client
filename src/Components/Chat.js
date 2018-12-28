@@ -113,7 +113,7 @@ class Chat extends Component {
                             this.handleClickOpen();
                         }
 
-                    }}>Send</Button>
+                    }} color="secondary">Send</Button>
                 </div>
             </div>
         )
