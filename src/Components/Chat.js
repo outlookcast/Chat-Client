@@ -90,7 +90,7 @@ class Chat extends Component {
                 {this.dialogRender()}
                 <header className="Chat-Header">Welcome to the chatroom</header>
                 <div style={{
-                    maxHeight: '85vh',
+                    maxHeight: '82vh',
                     overflowY: 'scroll'
                 }}>
                     {this.renderMessages()}
