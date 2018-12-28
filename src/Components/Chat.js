@@ -96,7 +96,8 @@ class Chat extends Component {
                 </div>
                 <div className="footer">
                     <FormControl style={{
-                        width: '80%'
+                        width: '80%',
+                        marginTop: '20px'
                     }}>
                         <Input onChange={(event) => {
                             this.setState({
