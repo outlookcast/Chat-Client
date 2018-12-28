@@ -99,7 +99,6 @@ class Chat extends Component {
                     <FormControl style={{
                         width: '80%'
                     }}>
-                        <InputLabel htmlFor="input-with-icon-adornment">Please, put your message</InputLabel>
                         <Input onChange={(event) => {
                             this.setState({
                                 message: event.target.value
